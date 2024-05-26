@@ -1,0 +1,10 @@
+package com.validate.validations_Exceptionss.exceptions;
+
+public class UserNotFoundException extends Exception {
+
+	public UserNotFoundException(String message) {
+		super(message);
+	}
+	
+
+}
