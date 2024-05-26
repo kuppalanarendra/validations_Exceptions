@@ -18,18 +18,20 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1")
-public class UserController {
+public class UserController { //controler class used to Handle request and responses of user
 	
 	@Autowired
-	private UserService userService;
-	@PostMapping("/user")
+	private UserService userService; 
+	
+	
+	@PostMapping("/user") //Postmaping to post the data into database
 	public User create(@RequestBody @Valid User user) throws UserNotFoundException {
-		User u =new User();
+		
 	
 		
-	   u=	userService.insert(user);
 		
-		return u;
+		
+		return userService.insert(user);
 		
 	}
 	@GetMapping("/get/{id}")
